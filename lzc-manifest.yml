@@ -1,18 +1,11 @@
-lzc-sdk-version: "0.1"
-name: KSpeeder
-package: cloud.lazycat.app.kspeeder
-version: 0.3.0
-description: Docker镜像加速专家
-homepage: https://kspeeder.istoreos.com
-author: istoreos
 application:
   subdomain: kspeeder
   background_task: true
   public_path:
     - /
-  routes:
-    - /=http://kspeeder:5003/
-
+  upstreams:
+    - location: /
+      backend: http://kspeeder:5003/
   ingress:
     - protocol: tcp
       port: 5443
@@ -20,7 +13,7 @@ application:
 
 services:
   kspeeder:
-    container_name: kspeeder
+    # upstream: linkease/kspeeder:0.3.0
     image: docker.1ms.run/linkease/kspeeder:0.3.0
     binds:
       - /lzcapp/var/data:/kspeeder-data

@@ -1,0 +1,14 @@
+package: cloud.lazycat.app.kspeeder
+version: 0.3.0
+name: KSpeeder
+description: "Docker镜像加速专家"
+min_os_version: "1.5.0"
+homepage: https://kspeeder.istoreos.com
+author: istoreos
+locales:
+  zh:
+    name: KSpeeder
+    description: "Docker镜像加速专家"
+  en:
+    name: KSpeeder
+    description: "Docker image acceleration expert"
