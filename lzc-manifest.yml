@@ -10,11 +10,10 @@ application:
     - protocol: tcp
       port: 5443
       service: kspeeder
-
 services:
   kspeeder:
-    # upstream: linkease/kspeeder:0.3.0
-    image: docker.1ms.run/linkease/kspeeder:0.3.0
+    # upstream: linkease/kspeeder:0.8.0
+    image: docker.1ms.run/linkease/kspeeder:0.8.0
     binds:
       - /lzcapp/var/data:/kspeeder-data
       - /lzcapp/var/config:/kspeeder-config
