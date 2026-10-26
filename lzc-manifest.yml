@@ -12,8 +12,8 @@ application:
       service: kspeeder
 services:
   kspeeder:
-    # upstream: linkease/kspeeder:0.8.4
-    image: docker.1ms.run/linkease/kspeeder:0.8.4
+    # upstream: linkease/kspeeder:0.8.5
+    image: docker.1ms.run/linkease/kspeeder:0.8.5
     binds:
       - /lzcapp/var/data:/kspeeder-data
       - /lzcapp/var/config:/kspeeder-config
